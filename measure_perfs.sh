@@ -63,7 +63,6 @@ start_atop() {
 }
 
 sample_atop() {
-    echo "..."
     kill -SIGUSR1 $ATOP_PID
 }
 
