@@ -35,7 +35,7 @@ stop_perf() {
     while kill -0 $PERF_PID 2>/dev/null; do
         sleep 1
         ((elapsed++))
-        if [ $elapsed == 10 ]; then
+        if [ $elapsed == 120 ]; then
             echo "perf didn't stop gracefully - killing it"
             kill -9 $PERF_PID
             return
